@@ -1,6 +1,6 @@
 #include "unity.h"
 #include "UnityHelper.h"
-#include "RTMP_TemperatureSensor.h"
+#include "RCOM_Communication.h"
 
 void setUp(void)
 {

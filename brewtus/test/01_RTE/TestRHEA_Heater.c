@@ -1,6 +1,6 @@
 #include "unity.h"
 #include "UnityHelper.h"
-#include "RTMP_TemperatureSensor.h"
+#include "RHEA_Heater.h"
 
 void setUp(void)
 {

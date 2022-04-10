@@ -1,0 +1,4 @@
+#ifndef RCOM_COMMUNICATION_H
+#define RCOM_COMMUNICATION_H
+
+#endif
