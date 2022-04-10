@@ -1,4 +1,6 @@
-#ifndef RCOM_COMMUNICATION_H
-#define RCOM_COMMUNICATION_H
+#ifndef _RCOM_COMMUNICATION_H_
+#define _RCOM_COMMUNICATION_H_
 
-#endif
+#include "Types.h"
+
+#endif //_RCOM_COMMUNICATION_H_

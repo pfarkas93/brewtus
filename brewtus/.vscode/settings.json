@@ -1,3 +1,10 @@
 {
-    "python.terminal.activateEnvironment": false
+    "python.terminal.activateEnvironment": false,
+    "ceedlingExplorer.shellPath": "null",
+    "files.associations": {
+        "*.ejs": "html",
+        "types.h": "c",
+        "unityhelper.h": "c",
+        "unity.h": "c"
+    }
 }
