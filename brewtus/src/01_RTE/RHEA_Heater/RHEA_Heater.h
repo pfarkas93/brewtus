@@ -20,16 +20,4 @@ extern void RHEA_TurnHeaterOn(void);
  */
 extern void RHEA_TurnHeaterOff(void);
 
-/**
- * @brief Is heater off
- * @return True, if heater is off
- */
-extern bool RHEA_IsHeaterOff(void);
-
-/**
- * @brief Is heater on
- * @return True, if heater is on
- */
-extern bool RHEA_IsHeaterOn(void);
-
 #endif //_RHEA_HEATER_H_

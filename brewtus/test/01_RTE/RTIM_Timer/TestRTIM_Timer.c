@@ -16,6 +16,10 @@ void test_GivenTimerPresent_WhenInitTimerIsCalled_ThenExpectNothing(void)
     RTIM_InitTimer();
 }
 
-/*RTIM_RegisterPeriodicTimerAlarmCallback()***********************************/
 /*RTIM_RegisterOneShotTimerAlarmCallback()************************************/
+void test_GivenAllSlotsEmpty_WhenRegisterOneShotTimerAlarmCallbackIsCalled_ThenExpect(void)
+{
+}
+
+/*RTIM_RegisterPeriodicTimerAlarmCallback()***********************************/
 /*RTIM_NotifySubscribers()****************************************************/

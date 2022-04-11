@@ -2,12 +2,7 @@
 #define _RTIM_TIMER_H_
 
 #include "Types.h"
-
-/**
- * @brief Function pointer type for timer callbacks
- *
- */
-typedef void (*TimerCallback_t)(void);
+#include "TIM_TimerCallbackTypes.h"
 
 /**
  * @brief Init Timer
@@ -22,6 +17,12 @@ extern void RTIM_InitTimer(void);
  * @param[in] periodInSeconds The alarm period in seconds. The callback will be called after this time is elapsed.
  * @return none
  */
-extern void RTIM_RegisterOneShotTimerAlarmCallback(TimerCallback_t *callback, uint16_t periodInSeconds);
+extern void RTIM_RegisterOneShotTimerAlarmCallback(TimerCallbackFunction_t *callback, uint16_t periodInSeconds);
+
+/**
+ * @brief Check if oneshot timer alarm callback service is available
+ * @return true, if the oneshot timer alarm callback service is available
+ */
+extern bool RTIM_IsOneShotTimerAlarmCallbackServiceAvailable(void);
 
 #endif //_RTIM_TIMER_H_

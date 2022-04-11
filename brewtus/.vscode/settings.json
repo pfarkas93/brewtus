@@ -7,6 +7,10 @@
         "unityhelper.h": "c",
         "unity.h": "c",
         "rpmp_pump.h": "c",
-        "rtim_timer.h": "c"
+        "rtim_timer.h": "c",
+        "rtim_oneshotcallbackhandler.h": "c",
+        "rtim_timercallbacktypes.h": "c",
+        "tim_oneshotcallbackhandler.h": "c",
+        "tim_timercallbacktypes.h": "c"
     }
 }

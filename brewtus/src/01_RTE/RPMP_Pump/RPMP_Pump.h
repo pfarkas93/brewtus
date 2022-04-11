@@ -20,16 +20,4 @@ extern void RPMP_TurnPumpOn(void);
  * @return none
  */
 extern void RPMP_TurnPumpOff(void);
-
-/**
- * @brief Is Pump off
- * @return True, if Pump is off
- */
-extern bool RPMP_IsPumpOff(void);
-
-/**
- * @brief Is Pump on
- * @return True, if Pump is on
- */
-extern bool RPMP_IsPumpOn(void);
 #endif //_RPMP_PUMP_H_

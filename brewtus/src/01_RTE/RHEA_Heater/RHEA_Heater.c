@@ -14,15 +14,3 @@ void RHEA_TurnHeaterOff(void)
 {
     /*HAL not present yet*/
 }
-
-bool RHEA_IsHeaterOff(void)
-{
-    /*HAL not present yet*/
-    return false;
-}
-
-bool RHEA_IsHeaterOn(void)
-{
-    /*HAL not present yet*/
-    return false;
-}
