@@ -5,6 +5,7 @@
         "*.ejs": "html",
         "types.h": "c",
         "unityhelper.h": "c",
-        "unity.h": "c"
+        "unity.h": "c",
+        "rpmp_pump.h": "c"
     }
 }
