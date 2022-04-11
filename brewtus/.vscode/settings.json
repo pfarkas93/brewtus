@@ -6,6 +6,7 @@
         "types.h": "c",
         "unityhelper.h": "c",
         "unity.h": "c",
-        "rpmp_pump.h": "c"
+        "rpmp_pump.h": "c",
+        "rtim_timer.h": "c"
     }
 }

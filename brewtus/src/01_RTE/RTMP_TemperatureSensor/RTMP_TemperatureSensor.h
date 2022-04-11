@@ -1,0 +1,6 @@
+#ifndef _RTMP_TEMPERATURESENSOR_H_
+#define _RTMP_TEMPERATURESENSOR_H_
+
+#include "Types.h"
+
+#endif //_RTMP_TEMPERATURESENSOR_H_

@@ -1,5 +1,5 @@
-#ifndef RPMP_PUMP_H
-#define RPMP_PUMP_H
+#ifndef _RPMP_PUMP_H_
+#define _RPMP_PUMP_H_
 
 #include "Types.h"
 
@@ -32,4 +32,4 @@ extern bool RPMP_IsPumpOff(void);
  * @return True, if Pump is on
  */
 extern bool RPMP_IsPumpOn(void);
-#endif
+#endif //_RPMP_PUMP_H_
