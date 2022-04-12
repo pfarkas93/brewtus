@@ -7,7 +7,7 @@
  * @brief Static struct instance of the callback
  *
  */
-static TimerCallback_t S_oneShotTimerCallback = {NULL, 0u, 0u};
+TESTABLE_STATIC TimerCallback_t S_oneShotTimerCallback = {NULL, 0u, 0u};
 
 /************************************/
 /*Local function definitions********/
@@ -21,7 +21,7 @@ static void OneShotCallbackHandler_DeleteCurrentCallback(void);
 /************************************/
 /*Global functions******************/
 /**********************************/
-void TIM_OneShotCallbackHandler_SetCallback(TimerCallbackFunction_t *callbackFunction, uint16_t periodInSeconds)
+void TIM_OneShotCallbackHandler_SetCallback(TimerCallbackFunction_t callbackFunction, uint16_t periodInSeconds)
 {
     S_oneShotTimerCallback.callbackFunction = callbackFunction;
     S_oneShotTimerCallback.periodInSeconds = periodInSeconds;
@@ -37,14 +37,17 @@ bool TIM_OneShotCallbackHandler_IsCallbackSlotEmpty(void)
 
 void TIM_OneShotCallbackHandler_DecrementRemainingTimeByOne(void)
 {
-    S_oneShotTimerCallback.remainingTimeInSeconds--;
+    if (0u < S_oneShotTimerCallback.remainingTimeInSeconds)
+    {
+        S_oneShotTimerCallback.remainingTimeInSeconds--;
+    }
 }
 
 void TIM_OneShotCallbackHandler_FireAndDeleteCallbackIfReady(void)
 {
     if (0u == S_oneShotTimerCallback.remainingTimeInSeconds)
     {
-        S_oneShotTimerCallback.callbackFunction;
+        S_oneShotTimerCallback.callbackFunction();
         OneShotCallbackHandler_DeleteCurrentCallback();
     }
 }

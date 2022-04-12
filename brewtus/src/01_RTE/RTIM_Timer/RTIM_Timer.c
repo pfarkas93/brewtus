@@ -1,4 +1,5 @@
 #include "RTIM_Timer.h"
+#include "HTIM_Timer.h"
 #include "TIM_OneShotCallbackHandler.h"
 
 /************************************/
@@ -22,16 +23,18 @@ static void HandleOneSecondElapsed(void);
 
 void RTIM_InitTimer(void)
 {
-    /*HAL not present yet*/
+    HTIM_InitTimer();
 }
 
 void RTIM_UpdateTimerServices(void)
 {
-    // if()
-    HandleOneSecondElapsed();
+    if (false != HTIM_IsTimerTickArrived())
+    {
+        HandleOneSecondElapsed();
+    }
 }
 
-void RTIM_RegisterOneShotTimerAlarmCallback(TimerCallbackFunction_t *callback, uint16_t periodInSeconds)
+void RTIM_RegisterOneShotTimerAlarmCallback(TimerCallbackFunction_t callback, uint16_t periodInSeconds)
 {
     TIM_OneShotCallbackHandler_SetCallback(callback, periodInSeconds);
 }
@@ -48,4 +51,6 @@ bool RTIM_IsOneShotTimerAlarmCallbackServiceAvailable(void)
 
 static void HandleOneSecondElapsed(void)
 {
+    TIM_OneShotCallbackHandler_DecrementRemainingTimeByOne();
+    TIM_OneShotCallbackHandler_FireAndDeleteCallbackIfReady();
 }

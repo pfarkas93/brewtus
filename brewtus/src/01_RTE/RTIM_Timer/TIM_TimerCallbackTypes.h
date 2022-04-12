@@ -19,7 +19,7 @@ typedef void (*TimerCallbackFunction_t)(void);
  */
 typedef struct TimerCallback
 {
-    TimerCallbackFunction_t *callbackFunction;
+    TimerCallbackFunction_t callbackFunction;
     uint16_t periodInSeconds;
     uint16_t remainingTimeInSeconds;
 } TimerCallback_t;
