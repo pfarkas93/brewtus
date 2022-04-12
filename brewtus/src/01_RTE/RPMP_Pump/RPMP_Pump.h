@@ -7,17 +7,17 @@
  * @brief Init Pump
  * @return none
  */
-extern void RPMP_InitPump(void);
+void RPMP_InitPump(void);
 
 /**
  * @brief Turn Pump on
  * @return none
  */
-extern void RPMP_TurnPumpOn(void);
+void RPMP_TurnPumpOn(void);
 
 /**
  * @brief Turn Pump off
  * @return none
  */
-extern void RPMP_TurnPumpOff(void);
+void RPMP_TurnPumpOff(void);
 #endif //_RPMP_PUMP_H_

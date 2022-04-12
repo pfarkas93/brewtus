@@ -8,7 +8,7 @@
  * @brief Init Timer
  * @return none
  */
-extern void RTIM_InitTimer(void);
+void RTIM_InitTimer(void);
 
 /**
  * @brief Register one shot timer alarm callback.
@@ -17,12 +17,19 @@ extern void RTIM_InitTimer(void);
  * @param[in] periodInSeconds The alarm period in seconds. The callback will be called after this time is elapsed.
  * @return none
  */
-extern void RTIM_RegisterOneShotTimerAlarmCallback(TimerCallbackFunction_t *callback, uint16_t periodInSeconds);
+void RTIM_RegisterOneShotTimerAlarmCallback(TimerCallbackFunction_t callback, uint16_t periodInSeconds);
+
+/**
+ * @brief Update timer services
+ * Check if Timer tick arrived, handle callback alarms.
+ * @return none
+ */
+void RTIM_UpdateTimerServices(void);
 
 /**
  * @brief Check if oneshot timer alarm callback service is available
  * @return true, if the oneshot timer alarm callback service is available
  */
-extern bool RTIM_IsOneShotTimerAlarmCallbackServiceAvailable(void);
+bool RTIM_IsOneShotTimerAlarmCallbackServiceAvailable(void);
 
 #endif //_RTIM_TIMER_H_

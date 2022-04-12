@@ -8,8 +8,6 @@ typedef unsigned int uint32_t;
 typedef int int32_t;
 typedef unsigned short uint16_t;
 typedef short int16_t;
-typedef unsigned char uint8_t;
-typedef char int8_t;
 
 #ifndef __cplusplus
 typedef unsigned char bool;
@@ -84,6 +82,12 @@ static const bool true = 1;
 
 #ifndef UINT32_MIN
 #define UINT32_MIN 0x00000000U
+#endif
+
+#ifdef TEST
+#define TESTABLE_STATIC
+#else
+#define TESTABLE_STATIC static
 #endif
 
 #endif // _TYPES_H_

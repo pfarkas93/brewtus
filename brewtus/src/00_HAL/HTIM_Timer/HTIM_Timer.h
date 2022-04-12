@@ -3,7 +3,7 @@
 
 #include "Types.h"
 
-extern void HTIM_InitTimer(void);
+void HTIM_InitTimer(void);
 
-extern bool HTIM_IsTimerTickArrived(void);
+bool HTIM_IsTimerTickArrived(void);
 #endif //_HTIM_TIMER_H_

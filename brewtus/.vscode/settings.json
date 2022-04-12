@@ -11,6 +11,8 @@
         "rtim_oneshotcallbackhandler.h": "c",
         "rtim_timercallbacktypes.h": "c",
         "tim_oneshotcallbackhandler.h": "c",
-        "tim_timercallbacktypes.h": "c"
+        "tim_timercallbacktypes.h": "c",
+        "mock_tim_oneshotcallbackhandler.h": "c",
+        "mock_htim_timer.h": "c"
     }
 }
